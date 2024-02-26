@@ -1,5 +1,6 @@
 package com.davifarias.desafioanotaai.domain.category;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Category {
     @Id
     private String id;
