@@ -1,6 +1,7 @@
 package com.davifarias.desafioanotaai.domain.product;
 
 import com.davifarias.desafioanotaai.domain.category.Category;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Product {
     @Id
     private String id;
