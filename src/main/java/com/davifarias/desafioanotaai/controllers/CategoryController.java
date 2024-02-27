@@ -31,13 +31,13 @@ public class CategoryController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Category> update(@PathParam("id") String id, @RequestBody CategoryDTO categoryData){
+    public ResponseEntity<Category> update(@PathVariable("id") String id, @RequestBody CategoryDTO categoryData){
         Category updatedCategory = this.service.update(id, categoryData);
         return ResponseEntity.ok().body(updatedCategory);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Category> delete(@PathParam("id") String id){
+    public ResponseEntity<Category> delete(@PathVariable("id") String id){
         this.service.delete(id);
         return ResponseEntity.noContent().build();
     }

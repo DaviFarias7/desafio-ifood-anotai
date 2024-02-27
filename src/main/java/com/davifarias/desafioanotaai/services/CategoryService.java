@@ -34,6 +34,7 @@ public class CategoryService {
     public Category update(String id, CategoryDTO categoryData) {
         Category category = this.repository.findById(id).
                 orElseThrow(CategoryNotFoundException::new);
+
         if(!categoryData.title().isEmpty()) category.setTitle(categoryData.title());
         if(!categoryData.description().isEmpty()) category.setDescription(categoryData.description());
 
